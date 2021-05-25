@@ -1,0 +1,811 @@
+/*
+Theme Name: Hello Elementor Child
+Theme URI: https://github.com/elementor/hello-theme/
+Description: Hello Elementor Child is a child theme of Hello Elementor, created by Elementor team
+Author: Elementor Team
+Author URI: https://elementor.com/
+Template: hello-elementor
+Version: 1.0.1
+Text Domain: hello-elementor-child
+License: GNU General Public License v3 or later.
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready
+*/
+
+/*
+    Add your custom styles here
+*/
+
+html,
+body {
+    font-family: Jost;
+}
+
+.elementor-location-footer {
+    clear: both;
+}
+
+.fazes {
+    max-width: 100%;
+    padding-left: 50%;
+    margin: auto;
+    position: relative;
+    padding-bottom: 80px;
+    margin-bottom: -50px;
+    margin-top: 50px;
+
+    .faze {
+        position: relative;
+
+        padding-bottom: 30px;
+        border-left: 3px solid #ccc;
+
+        h2 {
+            margin: 0;
+            text-align: left;
+            color: #13474a;
+            margin-left: 20px;
+            margin-bottom: 30px;
+            position: relative;
+
+            font-weight: 600;
+            font-size: 18px;
+            text-transform: uppercase;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: -32px;
+                width: 21px;
+                height: 21px;
+                border-radius: 50%;
+                background: #af3025;
+            }
+
+            small {
+                font-weight: normal;
+                text-transform: none;
+                display: inline-block;
+                line-height: 24px;
+                border-radius: 12px;
+                padding: 0 10px;
+                color: #fff;
+                background: #13474a;
+            }
+        }
+
+        .rezultata-rinda {
+            position: relative;
+            margin-bottom: 15px;
+            .datums {
+                text-align: left;
+                padding-left: 20px;
+                padding-right: 20px;
+                position: relative;
+                font-weight: bold;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: -7px;
+                    top: 7px;
+                    width: 11px;
+                    height: 11px;
+                    border-radius: 50%;
+                    background: #af3025;
+                }
+            }
+
+            .nosaukums {
+                font-size: 18px;
+                color: #347342;
+            }
+
+            .rinda-saturs {
+                background: #eaeaea;
+                margin: 20px;
+                margin-top: 10px;
+                padding: 20px;
+            }
+        }
+
+        &.faze1,
+        &.phase1 {
+            border-left: 3px solid #af3025;
+
+            h2 {
+                &::before {
+                    background: #af3025;
+                }
+            }
+
+            .rezultata-rinda {
+                .datums {
+                    &::before {
+                        background: #af3025;
+                    }
+                }
+            }
+        }
+
+        &.faze2,
+        &.phase2 {
+            border-left: 3px solid #13474a;
+            h2 {
+                &::before {
+                    background: #13474a;
+                }
+            }
+            .rezultata-rinda {
+                .datums {
+                    &::before {
+                        background: #13474a;
+                    }
+                }
+            }
+        }
+
+        &.faze3,
+        &.phase3 {
+            border-left: 3px solid #af3025;
+            h2 {
+                &::before {
+                    background: #af3025;
+                }
+            }
+            .rezultata-rinda {
+                .datums {
+                    &::before {
+                        background: #af3025;
+                    }
+                }
+            }
+        }
+
+        &.faze4,
+        &.phase4 {
+            border-left: 3px solid #347342;
+            padding-bottom: 0;
+            h2 {
+                &::before {
+                    background: #347342;
+                }
+            }
+            .rezultata-rinda {
+                .datums {
+                    &::before {
+                        background: #347342;
+                    }
+                }
+            }
+
+            .rezultata-rinda:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    .sakums {
+        width: 200px;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 20px;
+        transform: translateX(-50%);
+    }
+
+    .beigas {
+        width: 200px;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 20px;
+        transform: translateX(-50%);
+    }
+
+    .rezultata-rinda:nth-child(odd) {
+        transform: translateX(-100%);
+
+        .datums {
+            text-align: right;
+
+            &::before {
+                left: auto;
+                right: -4px;
+                top: 7px;
+            }
+        }
+    }
+}
+
+.htimeline {
+    float: left;
+    width: 100%;
+    clear: both;
+    position: relative;
+    margin-bottom: 30px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        right: 0;
+        width: 3px;
+        height: 20px;
+        background: #347342;
+    }
+
+    .today {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        padding-left: 5px;
+        font-weight: bold;
+        color: #af3025;
+        border-left: 3px solid #af3025;
+        z-index: 2;
+        height: 100px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: -7px;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: #af3025;
+        }
+    }
+
+    .faze {
+        display: block;
+        float: left;
+        border-bottom: 3px solid #eaeaea;
+        height: 100px;
+        position: relative;
+        color: #13474a;
+
+        &:hover {
+            color: #af3025;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            bottom: -12px;
+            width: 21px;
+            height: 21px;
+            border-radius: 50%;
+            background: #af3025;
+        }
+
+        .faze-content {
+            padding: 20px;
+            font-size: 12px;
+            h3 {
+                font-weight: 600;
+                font-size: 18px;
+                text-transform: uppercase;
+                position: relative;
+                margin: 0;
+            }
+        }
+
+        &.faze1,
+        &.phase1 {
+            width: 28.71%;
+            border-bottom: 3px solid #af3025;
+            &::before {
+                background: #af3025;
+            }
+            @media (max-width: 768px) {
+                width: 50%;
+            }
+        }
+        &.faze2,
+        &.phase2 {
+            width: 23.76%;
+            border-bottom: 3px solid #13474a;
+            &::before {
+                background: #13474a;
+            }
+            @media (max-width: 768px) {
+                width: 50%;
+            }
+        }
+        &.faze3,
+        &.phase3 {
+            width: 23.76%;
+            border-bottom: 3px solid #af3025;
+            &::before {
+                background: #af3025;
+            }
+            @media (max-width: 768px) {
+                width: 50%;
+            }
+        }
+        &.faze4,
+        &.phase4 {
+            width: 23.76%;
+            border-bottom: 3px solid #347342;
+            &::before {
+                background: #347342;
+            }
+            @media (max-width: 768px) {
+                width: 50%;
+            }
+        }
+    }
+}
+
+.pasakumi {
+    padding-top: 30px;
+    .nav-tabs {
+        margin-bottom: 20px;
+        .nav-item {
+            margin-bottom: -0.5px;
+        }
+        button {
+            color: #347342;
+            border-radius: 3px 3px 0 0;
+            &:hover {
+                color: #fff;
+            }
+
+            &.active {
+                &:hover {
+                    color: #495057;
+                }
+            }
+        }
+    }
+}
+
+.pasakums {
+    display: block;
+    border: 1px solid #f1f1f1;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+
+    &:hover {
+        background: #efefef;
+    }
+
+    .datums {
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .nosaukums {
+        font-weight: 500;
+        font-size: 20px;
+    }
+}
+
+.kalendars-widget {
+    font-size: 14px;
+    .datums {
+        font-size: 12px;
+    }
+
+    .nosaukums {
+        font-size: 14px;
+    }
+}
+
+.aktivitates {
+    .accordion-body {
+        padding: 15px;
+    }
+}
+
+.haktivitate {
+    width: 100%;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 50px;
+    margin: 0;
+    border: 1px solid #eaeaea;
+    padding-left: 20px;
+    margin-top: -1px;
+    background: #f5f5f5;
+    position: relative;
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
+
+    &::after {
+        content: "\f077";
+        font-family: "Font Awesome 5 Free";
+        position: absolute;
+        font-weight: 900;
+        font-size: 20px;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &.collapsed {
+        background: #fff;
+
+        &::after {
+            content: "\f078";
+        }
+
+        &:hover {
+            background: #f5f5f5;
+        }
+    }
+}
+
+.aktivitate {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+
+    width: 100%;
+    position: relative;
+
+    @media (max-width: 768px) {
+        margin-top: 20px;
+    }
+
+    &:hover {
+        background: #f5f5f5;
+    }
+
+    .atbildigais {
+        line-height: 20px;
+        text-transform: uppercase;
+        background: rgb(134, 134, 134);
+        color: #fff;
+        border-radius: 15px;
+        padding: 0 15px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        @media (max-width: 768px) {
+            top: -10px;
+        }
+    }
+
+    .nosaukums {
+        width: 100%;
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
+
+.paktivitates {
+    padding: 20px 0 0 0;
+    padding-bottom: 0;
+
+    width: 100%;
+
+    .paktivitate {
+        border: 1px solid #eaeaea;
+        border-radius: 3px;
+
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 15px;
+        position: relative;
+
+        &:hover {
+            background: #fff;
+        }
+
+        .nosaukums {
+            width: 100%;
+            font-weight: 600;
+            font-size: 18px;
+        }
+    }
+}
+
+.iepirkumi {
+    margin-top: 30px;
+    float: left;
+    width: 100%;
+
+    .iepirkums {
+        padding: 15px;
+        margin-bottom: 15px;
+        border: 1px solid #eaeaea;
+        border-radius: 3px;
+        float: left;
+        width: 100%;
+        position: relative;
+        .nosaukums {
+            float: left;
+
+            width: 100%;
+            font-weight: 600;
+            font-size: 20px;
+            padding-bottom: 10px;
+            display: block;
+        }
+        .saturs {
+            clear: both;
+        }
+    }
+}
+
+.publikacijas {
+    padding-top: 50px;
+    .publikacija {
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.gsc-search-box {
+    table {
+        margin: 0;
+    }
+
+    .gsc-input-box {
+        td {
+            background-color: #fff;
+            border: 0;
+
+            padding: 0 15px;
+            height: 40px;
+
+            .gsst_b {
+                padding: 0;
+            }
+
+            .gsib_a {
+                padding: 0;
+            }
+
+            .gsst_a {
+                text-align: center;
+                width: 40px;
+
+                margin-right: -15px;
+                height: 40px;
+                span {
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+
+    .gsc-search-button {
+        button {
+            height: 40px;
+
+            border-radius: 0;
+        }
+    }
+}
+
+.gsc-control-cse {
+    padding: 0 !important;
+
+    table td,
+    table th {
+        padding: 0px;
+        line-height: 1.5;
+        vertical-align: top;
+        border: 0;
+        background: #fff;
+    }
+
+    .gsc-result-info-container {
+        background: #fff;
+    }
+    .gsc-orderby-container {
+        display: none;
+    }
+}
+
+.gsc-adBlock {
+    display: none !important;
+}
+
+.gsc-cursor {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: inline-block !important;
+    .gsc-cursor-page {
+        width: 30px !important;
+        background: #eaeaea !important;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 15px;
+        display: inline-block !important;
+        text-align: center;
+    }
+
+    .gsc-cursor-current-page {
+        border-color: #367521;
+        background-color: #ffffff;
+        color: #fff !important;
+        background: #367521 !important;
+    }
+}
+
+.foto-galerija {
+    padding-top: 50px;
+    .galerija {
+        padding-bottom: 70px;
+        display: block;
+        position: relative;
+        height: 100%;
+
+        .thumbnail {
+            height: 200px;
+            position: relative;
+            -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: auto;
+                width: auto;
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        h3 {
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+    }
+}
+
+.video-galerija {
+    .thumbnail {
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.galerija-in {
+    padding-top: 30px;
+    .item {
+        padding-bottom: 20px;
+        text-align: center;
+        img {
+            border-radius: 2px;
+        }
+    }
+}
+
+.jautajumi-atbildes {
+    h3 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.fancybox-button,
+.fancybox-arrow {
+    background: transparent !important;
+}
+.fancybox-container {
+    z-index: 99999999;
+}
+
+.footer-jaunumi {
+    .wpcf7 {
+        .wpcf7-submit {
+            border: 0;
+        }
+
+        .wpcf7-list-item {
+            color: #fff;
+            margin-left: 0;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            a {
+                color: #fff;
+                text-decoration: underline;
+            }
+        }
+
+        .wpcf7-response-output {
+            margin-left: 0 !important;
+            margin-top: 10px;
+            border-radius: 3px;
+            background: #fff;
+        }
+    }
+}
+
+.single-jaunumi {
+    .wpcf7 {
+        .wpcf7-submit {
+            border: 0;
+        }
+
+        .wpcf7-list-item {
+            margin-left: 0;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            a {
+                text-decoration: underline;
+            }
+        }
+
+        .wpcf7-response-output {
+            margin-left: 0 !important;
+            margin-top: 10px;
+            border-radius: 3px;
+            background: #fff;
+        }
+    }
+}
+blockquote {
+    padding-left: 20px;
+    border-left: 5px solid #347342;
+    font-weight: 500;
+}
+
+
+
+//file types
+
+.saistitie {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    display: block;
+    a {
+      display: block;
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+  }
+}
+
+
+a[href$='.pdf']::before {
+    content: "\f1c1";
+    margin-right: 5px;
+    color: red;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 500;
+}
+
+a[href$='.zip']::before,
+a[href$='.rar']::before
+ {
+    content: "\f1c6";
+    margin-right: 5px;
+    color: orange;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 500;
+}
+
+a[href$='.docx']::before,
+a[href$='.doc']::before {
+    content: "\f1c2";
+    margin-right: 5px;
+    color: blue;
+    font-family: 'Font Awesome 5 Free';
+      font-weight: 500;
+}
+
+a[href$='.xls']::before,
+a[href$='.xlsx']::before {
+    content: "\ef39";
+    margin-right: 5px;
+    color: green;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 500;
+}
